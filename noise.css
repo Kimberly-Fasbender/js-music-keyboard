@@ -12,7 +12,7 @@ body {
   margin: 5rem auto;
 }
 
-.note {
+.note, .chopsticks{
   cursor: pointer;
   font-size: 3rem;
   width: 8rem;
@@ -21,6 +21,12 @@ body {
   padding: 0;
   border: 3px solid currentColor;
 }
+
+.chopsticks {
+  width: 10rem;
+  font-size: 1.7rem;
+}
+
 
 .note:focus { outline: none; }
 
@@ -51,3 +57,7 @@ body {
 .b { color: #f26fd4; background-color: #43293d; }
 .b:hover { background-color: #6f3a62; }
 .b:active, .b.active { background-color: #f26fd4; }
+
+.chopsticks { background-color: #3e181b; color: #db1d2d; }
+.chopsticks:hover { background-color: #661920; }
+.chopsticks:active, .chopstick.active { background-color: #db1d2d; }

@@ -16,23 +16,15 @@ $(document).ready( () => {
 
   $('.note').click(function(event) {
     const key = `${this.innerHTML}`;
-      if (notes[key].paused) {
-        notes[key].play();
-      } else {
-        notes[key].currentTime = 0;
-      }
+    const newKey = notes[key].cloneNode(true);
+    newKey.play();
   });
 
-  $('body').keydown(function(event) {
+  $('body').keypress(function(event) {
     const key = String.fromCharCode(event.keyCode).toLowerCase();
-   
-      if (notes[key]) {
-        if (notes[key].paused) {
-          notes[key].play();
-        } else {
-          notes[key].currentTime = 0;
-        }
-      }
+    if (notes[key]) {
+      const newKey = notes[key].cloneNode(true);
+      newKey.play();
+    }
   });
-
 });
